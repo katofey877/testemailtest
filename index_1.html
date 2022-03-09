@@ -1,145 +1,677 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home Work</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HTML Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+
+	<style>
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+		}
+
+		[style*="Open Sans"] {
+			font-family: 'Open Sans', arial, sans-serif !important;
+		}
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border: none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100% !important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+
+		table td {
+			border-collapse: collapse;
+		}
+
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		.header-td {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+
+		.title-td {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+		.product-td {
+			padding-bottom: 30px;
+		}
+
+		.button-td {
+			padding-bottom: 80px;
+		}
+
+		.footer-top-td {
+			padding-top: 75px;
+			padding-bottom: 0px;
+		}
+
+		.footer-text-td p {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 18px;
+			text-align: center;
+			color: #ffffff;
+			margin-top: 15px;
+			margin-bottom: 25px;
+		}
+
+		.footer-descr-td {
+			border-top: 1px solid #525252;
+		}
+
+		.footer-descr-td p {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 16px;
+			text-align: center;
+			color: #ffffff;
+			margin-top: 20px;
+			margin-bottom: 25px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.footer-descr-td a {
+			color: #ffffff;
+		}
+
+		.footer-bottom-td {
+			padding-top: 25px;
+			padding-bottom: 30px;
+		}
+
+		.footer-label-td p {
+			font-size: 16px;
+			line-height: 18px;
+			text-align: center;
+			color: #989898;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.title-td p {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 35px;
+			text-align: center;
+			text-transform: uppercase;
+			color: #3F3F3F;
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+
+		.item-product-image .item-product-img {
+			border-top: 3px solid #FDFAFC;
+			border-left: 3px solid #FDFAFC;
+			border-right: 3px solid #FDFAFC;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			background-color: #fdfafc;
+		}
+
+		.item-product-title p {
+			border-left: 3px solid #FDFAFC;
+			border-right: 3px solid #FDFAFC;
+			padding-top: 10px;
+			padding-bottom: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 16px;
+			text-align: center;
+			color: #3F3F3F;
+		}
+
+		.item-product-category p {
+			border-left: 3px solid #FDFAFC;
+			border-right: 3px solid #FDFAFC;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding-bottom: 10px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+			text-align: center;
+			color: #747474;
+		}
+
+		.item-product-price p {
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-left: 3px solid #FDFAFC;
+			border-right: 3px solid #FDFAFC;
+			border-bottom: 3px solid #FDFAFC;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding-bottom: 20px;
+			font-weight: 600;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+			color: #560C3E;
+		}
+
+		.hero-title-td {
+			padding-top: 30px;
+		}
+
+		.hero-arrow-td{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.hero-button-td {
+			padding-bottom: 30px;
+		}
+
+		.product-block-td {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.hero-main-table {
+			border-radius: 10px;
+		}
+
+		.hero-title-td p {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 35px;
+			text-align: center;
+			text-transform: uppercase;
+			color: #ffffff;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.product-block-main-table {
+			border-radius: 20px;
+
+		}
+
+		.item-product-block-title p {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 16px;
+			color: #3F3F3F;
+			margin-top: 0;
+			margin-bottom: 5px;
+			max-height: 32px;
+			min-height: 32px;
+			overflow: hidden;
+		}
+
+		.item-product-block-image p {
+			border-radius: 10px;
+			background-color: #FDFAFC;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+
+		.item-product-block-price p {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 18px;
+			color: #A01A77;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+
+		@media (max-width: 630px) {
+			.table-600 {
+				width: 500px !important;
+			}
+
+			.table-540 {
+				width: 440px !important;
+			}
+
+			.table-480 {
+				width: 440px !important;
+			}
+
+			.item-product-table {
+				width: 50px !important;
+			}
+
+			.item-product-td .item-product-table {
+				width: 210px !important;
+			}
+
+			.button-td {
+				padding-bottom: 40px;
+			}
+
+			.footer-top-td {
+				padding-top: 30px;
+			}
+
+		}
+
+		@media (max-width: 520px) {
+			.table-600 {
+				width: 400px !important;
+			}
+
+			.table-540 {
+				width: 340px !important;
+			}
+
+			.table-480 {
+				width: 340px !important;
+			}
+
+			.item-product-table {
+				width: 40px !important;
+			}
+
+			.item-product-td .item-product-table {
+				width: 160px !important;
+			}
+
+			.item-product-price p {
+				font-size: 18px;
+			}
+
+			.title-td p {
+				font-size: 22px;
+				line-height: 26px;
+			}
+
+			.hero-title-td p {
+				font-size: 22px;
+				line-height: 26px;
+			}
+		}
+
+		@media (max-width: 420px) {
+			.table-600 {
+				width: 320px !important;
+			}
+
+			.table-540 {
+				width: 290px !important;
+			}
+
+			.table-480 {
+				width: 290px !important;
+			}
+
+			.table-355 {
+				width: 290px !important;
+			}
+
+			.item-product-table {
+				width: 30px !important;
+			}
+
+			.item-product-td .item-product-table {
+				width: 140px !important;
+			}
+
+			.item-product-td_left {
+				padding-right: 5px !important;
+			}
+
+			.item-product-td_right {
+				padding-left: 5px !important;
+			}
+
+
+			.product-block-main-table {
+				width: 270px !important;
+			}
+
+			.item-product-block-td_right .item-product-block-table {
+				width: 157px !important;
+			}
+
+			.item-product-block-td_left {
+				padding-left: 5px !important;
+			}
+
+			.item-product-block-td_right {
+				padding-right: 5px !important;
+				padding-left: 5px !important;
+			}
+		}
+	</style>
 </head>
 
-<body>
-	<header class="header">
-		<h1>Все, що потрібно знати перед сеансом тату</h1>
+<body style="margin: 0; padding: 0;">
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+		<tr>
+			<td>
+				<table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+					<tr>
+						<td bgcolor="#ffffff" class="header-td">
+							<table class="table-540" cellpadding="0" cellspacing="0" width="540" align="center">
+								<tr>
+									<td align="center" class="logo">
+										<img src="img/logo.svg" alt="logo" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="hero-td">
+							<table class="table-540 hero-main-table" cellpadding="0" cellspacing="0" width="540" align="center"
+								bgcolor="#560C3E">
+								<tr>
+									<td class="hero-title-td">
+										<table class="table-540" cellpadding="0" cellspacing="0" width="540" align="center">
+											<tr>
+												<td>
+													<p class="hero-title"
+														style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Подтвердите регистрацию
+													</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="hero-arrow-td">
+										<table cellpadding="0" cellspacing="0" width="56" align="center">
+											<tr>
+												<td>
+													<img src="img/arrow.svg" alt="arrow-img" />
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="hero-button-td">
+										<table class="table-220" cellpadding="0" cellspacing="0" width="220" align="center">
+											<tr>
+												<td>
+													<a href="#"><img src="img/btn-1.svg" alt="btn" /></a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="title-td" bgcolor="#ffffff">
+							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+								<tr>
+									<td>
+										<p class="title" style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+											продолжить покупки
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="img/line.png" alt="line" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="product-td" bgcolor="#ffffff">
+							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+								<tr>
+									<td class="item-product-td item-product-td_left" align="center" style="padding-right: 10px;">
+										<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+											width="230">
+											<tr>
+												<td class="item-product-image">
+													<p class="item-product-img">
+														<img src="img/product-01.png" alt="product" />
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-title" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Принтер для цветной печати Epson 205-S (W2G50A)
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-category" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Принтер
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-price" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														$1 600 000
+													</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="item-product-td item-product-td_right" align="center" style="padding-left: 10px;">
+										<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+											width="230">
+											<tr>
+												<td class="item-product-image">
+													<p class="item-product-img">
+														<img src="img/product-02.png" alt="product" />
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-title" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Принтер для цветной печати Epson 205-S (W2G50A)
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-category" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Принтер
+													</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="item-product-price" align="center" bgcolor="#ffffff">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														$160
+													</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="button-td" bgcolor="#ffffff">
+							<table class="table-220" cellpadding="0" cellspacing="0" width="220" align="center">
+								<tr>
+									<td>
+										<a href="#"><img src="img/btn.png" alt="link-product" /></a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+					<tr>
+						<td class="footer-top-td" bgcolor="#3F3F3F">
+							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+								<tr>
+									<td class="footer-logo-td" align="center">
+										<a href="#">
+											<img src="img/logo-white.svg" alt="logo" />
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="footer-text-td" align="center">
+										<table class="table-355" cellpadding="0" cellspacing="0" width="355" align="center">
+											<tr>
+												<td align="center">
+													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+														Прочувствуйте все нюансы звука, направленные на пользователя динамики и
+														двунаправленный на пользователя
+													</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="footer-descr-td" align="center">
+										<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+											<tr>
+												<td align="center">
+													<p>Вы получаете письмо, потому что подписались на рассылку iprintix.com. Если вы
+														не хотите больше получать наши письма, нажмите <a href="#">отписаться</a>.</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="footer-bottom-td" bgcolor="#323232">
+							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+								<tr>
+									<td class="footer-label-td" align="center">
+										<p>© 2021 Printix</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="payment-td">
+										<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
+											<tr>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-01.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-02.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-03.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-04.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-05.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-06.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-payment-td" align="center" style="padding-right: 0px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
+														width="60">
+														<tr>
+															<td class="item-product-image">
+																<img src="img/payment-07.png" alt="payment" />
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 
-		<nav class="nav">
-			<div>
-				<h3>Зміст:</h3>
-			</div>
-			<ol class="list">
-				<li><a href="#link1">Що потрібно знати перед тим, як набити тату?</a></li>
-				<li><a href="#link2">Що не можна робити «до» та «після» тату?</a></li>
-				<li><a href="#link3">Які можуть бути наслідки тату?</a></li>
-				<li><a href="#link4">Від чого залежить ціна тату та чи можливо її вирахувати самостійно?</a></li>
-				<li><a href="#link5">Як обрати майстра?</a></li>
-				<li><a href="#link6">Найбільші міфи</a></li>
-				<li><a href="#link7">Як доглядати за тату?</a></li>
-				<li><a href="#link8">Як обрати місце для тату?</a></li>
-				<li><a href="#link9">Чи є категорія людей, яким заборонено робити тату?</a></li>
-			</ol>
-		</nav>
-	</header>
-	<main class="content">
-		<h4>Тату – малюнок на тілі, який для кожного має свій особливий сенс. Одні набивають гарні малюнки, <br> бо вони
-			доповнюють їхнє тіло, або ж просто хочуть додати власної естетики. Інші ж в то вкладають <br> сакральний сенс,
-			або
-			ж, як в стародавні часи, за допомогою тату хочуть розповісти про свій соціальний стан.</h4>
-		<p>У будь-якому випадку татуювання – це процедура, перед якою потрібно підготуватись та дізнатись <br> хоч трішки
-			інформації, яка може знадобиться у майбутньому. Малюнок на вашому тілі має <br> виглядати справді довершено,
-			щоб
-			потім не гуглити “як видалити небажане татуювання з тіла”.</p>
-
-		<p>Так от твій МедіаБро поспілкувався з тату майстрами Львова, яких ти вже неодноразово зустрічав <br> у просторі
-			Instagram, і отримав відповіді на найпоширеніші запитання, які можуть виникнути перед <br> сеансом тату.</p>
-		<img src="img/15368724_582064638648731_882677663_o.jpg" alt="Человек набивает татуировку">
-		<h2 id="link1">Що потрібно знати перед тим, як набити тату?</h2>
-		<p>Що ж, найперше ми тобі порадимо – запевнись, що це саме те, що ти <br> хочеш набити. Навіть, якщо це штрих-код
-			чи китайський ієрогліф, якщо це <br> тобі подобається – бий. Не шукай в тату глибинний і сакральний зміст. Не
-			<br> гугли, що означає твій малюнок. Найголовніше, щоб тобі це подобалось, <br> а якщо без сенсу ніяк – то
-			придумай його сам, щось особливе, своє.
-		</p>
-		<h4>«Деякі клієнти дуже дивуються чому тьмянішають фарби після того, <br> як тату заживе. Пам’ятайте, колір тату
-			не буде таким яскравим, адже <br> спочатку фарби знаходяться на поверхні, але згодом шар шкіри <br> покриває
-			їх, тому і тату менш яскраве»</h4>
-		<h2 id="link2">Що не можна робити «до» та «після» тату?</h2>
-		<p>Тут усі майстри зійшлись на одному головному пункті – алкоголь. Не дурій і <br> не пий перед запланованим
-			сеансом
-			тату. Це тільки у фільмах все так круто: <br> напитись – набити. У реальному житті – ти втрачатимеш більше
-			крові, що <br>
-			заважатиме майстру набивати малюнок, фарби можуть елементарно поплисти.</p>
-		<p>Так само не пий багато і після сеансу, а також на деякий час забудь про <br> спорт. Дай рані зажити, а тілу
-			відновитись.</p>
-		<img src="img/tattoo-master-1140x642.jpg" alt="Руки которые держут машинку для татуювання">
-		<h2 id="link3">Які можуть бути наслідки тату?</h2>
-		<p>Найголовніший і найприємніший наслідок – це здійснення твоєї мрії. Гарний <br> малюнок назавжди залишиться на
-			твоєму тілі і тільки доповнить як зовнішній <br> вигляд так і внутрішній стан.</p>
-		<h4>«Вигляд малюнка залежить не тільки від майстра, а ще й особисто <br> від клієнта. 50% якості малюнка – це
-			догляд за
-			тату після сеансу. <br> Якщо людина погано доглядає, то може вийти фарба та й взагалі <br> зіпсуватись всі
-			старання
-			майстра»</h4>
-		<p>Не забувай правильно доглядати за тату і тоді наслідки будуть тільки <br> позитивні. А як правильно доглядати
-			ти дізнаєшся трішки згодом.</p>
-		<h2 id="link4">Від чого залежить ціна тату та чи можливо її <br> вирахувати самостійно?</h2>
-		<p>Ми почули не одну відповідь і можемо сказати точно: самостійно <br> вирахувати майбутню ціну тату – неможливо.
-			Кожен майстер самостійно <br> встановлює її. Можемо тільки сказати від чого залежить ціна:</p>
-		<ul>
-			<li>досвід майстра;</li>
-			<li>його популярність;</li>
-			<li>матеріали, які використовує майстер;</li>
-			<li>складність роботи;</li>
-			<li>кількість сеансів;</li>
-			<li>ескіз майстра чи вже готовий твій;</li>
-		</ul>
-		<h4>«Оскільки всі ці пункти в кожного майстра індивідуальні, навряд чи <br> можна щось вирахувати. Хіба що дуже
-			здалеку.»</h4>
-		<img src="img/hend.jpg" alt="рука с тату на запястии">
-		<h2 id="link5">Як обрати майстра?</h2>
-		<p>Вже обрали малюнок, який бажаєте і точно впевненні, що готові? Час обрати <br> майстра, який тільки довершить
-			ваш задум і втілить його на вашій шкірі.</p>
-		<p>Найкращий спосіб обрати майстра – це передивитись його портфоліо та <br> коментарі тих, хто вже користувався
-			його послугами. Дуже дякуємо силі <br> соціальних мереж за таку можливість. Зверніть увагу на стиль малюнків з
-			<br> якими працює автор – це має бути щось схоже на те, що бажаєте ви. Якщо <br> майстер працює з
-			мінімалістичними тату, то для того щоб набити рукав <br> краще обрати іншого. Є майстри, які не працюють з
-			кольоровими тату.
-		</p>
-		<h4>«Не бійтесь попросити вибраного майстра навідатись до нього на <br> робоче місце: подивитись чистоту,
-			розпитати особисто про <br> дезинфекцію, щоб бути впевненим в стерильності та своїй безпеці»</h4>
-		<p>Саме такі маленькі консультації перед тату дадуть тобі змогу переконатись <br> у виборі майстра та його
-			професійності.</p>
-		<h2 id="link6">Найбільші міфи</h2>
-		<p>Найголовніший і найбільший міф пов’язаний із значенням тату. Не вірте в те, <br> що тату змінить вашу долю, що
-			слон додасть вам сили, а квіточка – ніжності.</p>
-		<p>Тату – це малюнок, який ти обираєш самостійно, і він може мати тільки одне <br> значення – те, яке ти надаси
-			йому. Якщо тату для тебе нова сторінка життя, <br> то так і буде, якщо ж це просто гарний малюнок – то тату
-			неймовірно <br> доповнить твоє тіло.</p>
-		<p>І ще не забувай – тату набивається на все життя. Тимчасових тату не існує, <br> тільки наліпки.</p>
-		<img src="img/work.jpg" alt="Мастер делает тату на руке">
-		<h2 id="link7">Як доглядати за тату?</h2>
-		<p>Про це тобі обов’язково розповість твій тату-майстер після сеансу. Виконуй <br> всі його рекомендації, від
-			цього залежить результат старання майстра та <br> твого вибору.</p>
-		<h4>«Треба завжди слухати свого майстра і виконувати всі етапи <br> догляду. Перші 2-3 дні мити тату з милом і
-			мазати кремом, який <br> сприяє швидкому загоєнню, і замотувати одноразовою пелюшкою. <br> Це робити 3-4 рази
-			на день. Після того до 2 тижнів продовжувати <br> мити і мазати 3 рази на день, але вже не замотувати.»</h4>
-		<p>Якщо методи догляду твого майстра трішки відрізняють , це не біда і не <br> вказує на непрофесіоналізм. У
-			кожного свої власні методи, але більшість <br> рекомендує саме крем та пелюшку.</p>
-		<p>Та навіть коли тату загоїться і шкіра вже перестане чесатися – не забувай <br> доглядати за тату, від цього
-			залежить чи знадобиться тобі корекція чи <br> поновлення. Якщо любиш багато проводити часу на сонці, то
-			обов’язково <br> користуйся кремами проти засмаги. Тату може досить швидко втратити свій <br> колір та
-			привабливість.</p>
-		<img src="img/women.jpeg" alt="девушка в татуировках">
-		<h2 id="link8">Як обрати місце для тату?</h2>
-		<h4>«Це вже дуже індивідуально. Найкраще, коли людина має ідею, що <br> саме вона хоче. Тоді малюємо ескіз і
-			просто приміряємо його, куди <br> підійде. Не потрібно обирати тату під місце, обирайте місце під тату.»</h4>
-		<p>Ну, і звичайно в Інтернеті ти можеш знайти карту болю, якщо дуже боїшся.</p>
-		<img src="img/pain-men-2-768x413.jpg" alt="части тела где больно бить тату">
-		<h2 id="link9">Чи є категорія людей, яким заборонено робити тату?</h2>
-		<p>Тату – це дуже відповідальна та індивідуальна справа, тому перед тим, як <br> щось набивати, запевнися, що ти:
-		</p>
-		<ul>
-			<li>не хворієш на шкірні захворювання та не маєш цукрового діабету;</li>
-			<li>повнолітній;</li>
-			<li>точно знаєш, що саме хочеш набити, і прочитав всі попередні пункти.</li>
-		</ul>
-		<p>Не забувай, що тату залишиться з тобою назавжди, і виводити малюнок <br> ще більш боляче, ніж його набивати.
-		</p>
-	</main>
-	<footer class="footer">
-		<div class="block">
-			<a href="https://lviv.com/urban/vse-shcho-potribno-znaty-pered-seansom-tatu/" target="_blank">Ссылка на
-				оригинальные метериалы</a>
-
-		</div>
-	</footer>
+	<script src="js/vendors.min.js"></script>
+	<script src="js/app.min.js"></script>
 </body>
 
 </html>
