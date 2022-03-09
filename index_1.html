@@ -140,15 +140,23 @@
 			border-right: 3px solid #FDFAFC;
 			padding-top: 10px;
 			padding-bottom: 15px;
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: 6px;
+			padding-right: 6px;
 			margin-top: 0px;
 			margin-bottom: 0px;
+
+		}
+
+		.item-product-title span {
+			display: block;
 			font-weight: 700;
 			font-size: 14px;
 			line-height: 16px;
 			text-align: center;
 			color: #3F3F3F;
+			min-height: 32px;
+			max-height: 32px;
+			overflow: hidden;
 		}
 
 		.item-product-category p {
@@ -157,11 +165,20 @@
 			margin-top: 0px;
 			margin-bottom: 0px;
 			padding-bottom: 10px;
-			font-weight: 400;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+
+		.item-product-category span {
+			display: block;
+			font-weight: 600;
 			font-size: 14px;
 			line-height: 16px;
 			text-align: center;
 			color: #747474;
+			min-height: 16px;
+			max-height: 16px;
+			overflow: hidden;
 		}
 
 		.item-product-price p {
@@ -173,20 +190,22 @@
 			margin-top: 0px;
 			margin-bottom: 0px;
 			padding-bottom: 20px;
+		}
+
+		.item-product-price span {
+			display: block;
 			font-weight: 600;
 			font-size: 25px;
 			line-height: 30px;
 			text-align: center;
 			color: #560C3E;
+			min-height: 30px;
+			max-height: 30px;
+			overflow: hidden;
 		}
 
 		.hero-title-td {
 			padding-top: 30px;
-		}
-
-		.hero-arrow-td{
-			padding-top: 20px;
-			padding-bottom: 20px;
 		}
 
 		.hero-button-td {
@@ -235,8 +254,8 @@
 		.item-product-block-image p {
 			border-radius: 10px;
 			background-color: #FDFAFC;
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 
 		.item-product-block-price p {
@@ -244,8 +263,11 @@
 			font-size: 16px;
 			line-height: 18px;
 			color: #A01A77;
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
+			margin-top: 0;
+			margin-bottom: 0;
+			max-height: 18px;
+			min-height: 18px;
+			overflow: hidden;
 		}
 
 		@media (max-width: 630px) {
@@ -270,11 +292,11 @@
 			}
 
 			.button-td {
-				padding-bottom: 40px;
+				padding-bottom: 40px !important;
 			}
 
 			.footer-top-td {
-				padding-top: 30px;
+				padding-top: 30px !important;
 			}
 
 		}
@@ -300,18 +322,21 @@
 				width: 160px !important;
 			}
 
-			.item-product-price p {
-				font-size: 18px;
+			.item-product-price span {
+				font-size: 18px !important;
+				min-height: 18px!important;
+				max-height: 18px!important;
+				line-height: 18px!important;
 			}
 
 			.title-td p {
-				font-size: 22px;
-				line-height: 26px;
+				font-size: 22px !important;
+				line-height: 26px !important;
 			}
 
 			.hero-title-td p {
-				font-size: 22px;
-				line-height: 26px;
+				font-size: 22px !important;
+				line-height: 26px !important;
 			}
 		}
 
@@ -349,6 +374,7 @@
 			}
 
 
+
 			.product-block-main-table {
 				width: 270px !important;
 			}
@@ -370,7 +396,7 @@
 </head>
 
 <body style="margin: 0; padding: 0;">
-	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ec5483">
 		<tr>
 			<td>
 				<table class="main table-600" cellpadding="0" cellspacing="0" width="600" align="center">
@@ -386,7 +412,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="hero-td">
+						<td class="hero-td" bgcolor="#ffffff">
 							<table class="table-540 hero-main-table" cellpadding="0" cellspacing="0" width="540" align="center"
 								bgcolor="#560C3E">
 								<tr>
@@ -396,7 +422,7 @@
 												<td>
 													<p class="hero-title"
 														style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														Подтвердите регистрацию
+														Вы забыли товары в вашей корзине
 													</p>
 												</td>
 											</tr>
@@ -404,11 +430,43 @@
 									</td>
 								</tr>
 								<tr>
-									<td class="hero-arrow-td">
-										<table cellpadding="0" cellspacing="0" width="56" align="center">
+									<td class="product-block-td">
+										<table class="product-block-main-table table-280" cellpadding="0" cellspacing="0"
+											width="280" align="center" bgcolor="#ffffff">
 											<tr>
-												<td>
-													<img src="img/arrow-test.png" alt="arrow-img" />
+												<td class="item-product-block-td item-product-block-td_left" align="center"
+													style="padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-block-table"
+														align="center" width="83">
+														<tr>
+															<td class="item-product-block-image" bgcolor="#ffffff">
+																<p class="item-product-block-img">
+																	<img src="img/product-03.png" alt="product" />
+																</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td class="item-product-block-td item-product-block-td_right" align="center"
+													style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+													<table cellpadding="0" cellspacing="0" class="item-product-block-table"
+														align="center" width="167">
+														<tr>
+															<td class="item-product-block-title" align="left">
+																<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+																	Принтер для цветной печати Epson 205-S (W2G50A)
+																	Принтер для цветной печати Epson 205-S (W2G50A)
+																</p>
+															</td>
+														</tr>
+														<tr>
+															<td class="item-product-block-price" align="left">
+																<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
+																	$1 600 000 
+																</p>
+															</td>
+														</tr>
+													</table>
 												</td>
 											</tr>
 										</table>
@@ -419,7 +477,7 @@
 										<table class="table-220" cellpadding="0" cellspacing="0" width="220" align="center">
 											<tr>
 												<td>
-													<a href="#" target="blank"><img src="img/btn-1.png" alt="btn" /></a>
+													<a href="#" target="blank"><img src="img/btn-2.png" alt="btn" /></a>
 												</td>
 											</tr>
 										</table>
@@ -450,67 +508,72 @@
 						<td class="product-td" bgcolor="#ffffff">
 							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
 								<tr>
-									<td class="item-product-td item-product-td_left" align="center" style="padding-right: 10px; vertical-align: top;">
+									<td class="item-product-td item-product-td_left" align="center"
+										style="padding-right: 10px; vertical-align: top;">
 										<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
 											width="230">
 											<tr>
 												<td class="item-product-image">
 													<p class="item-product-img">
-														<img src="img/product-01.png" alt="product" />
+														<img src="img/product-03.png" alt="product" />
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-title" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														Принтер для цветной печати Epson 205-S (W2G50A)
+														<span>
+															Принтер для цветной печати Epson 205-S (W2G50A)
+															Принтер для цветной печати Epson 205-S (W2G50A)
+														</span>
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-category" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														Принтер
+														<span>Принтер </span>
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-price" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														$1 600 000
+														<span>$1 600 000 </span>
 													</p>
 												</td>
 											</tr>
 										</table>
 									</td>
-									<td class="item-product-td item-product-td_right" align="center" style="padding-left: 10px; vertical-align: top;">
+									<td class="item-product-td item-product-td_right" align="center"
+										style="padding-left: 10px; vertical-align: top;">
 										<table cellpadding="0" cellspacing="0" class="item-product-table" align="center"
 											width="230">
 											<tr>
 												<td class="item-product-image">
 													<p class="item-product-img">
-														<img src="img/product-02.png" alt="product" />
+														<img src="img/product-04.png" alt="product" />
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-title" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														Принтер для цветной печати Epson 205-S (W2G50A)
+														<span>Принтер для цветной печати Epson 205-S (W2G50A)</span>
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-category" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														Принтер
+														<span>Принтер</span>
 													</p>
 												</td>
 											</tr>
 											<tr>
 												<td class="item-product-price" align="center" bgcolor="#ffffff">
 													<p style="font-family: Arial, Helvetica, sans-serif, 'Open Sans';">
-														$160
+														<span>$160</span>
 													</p>
 												</td>
 											</tr>
@@ -542,7 +605,7 @@
 							<table class="table-480" cellpadding="0" cellspacing="0" width="480" align="center">
 								<tr>
 									<td class="footer-logo-td" align="center">
-										<a href="#">
+										<a href="#" target="blank">
 											<img src="img/logotest-white.png" alt="logo" />
 										</a>
 									</td>
@@ -567,7 +630,8 @@
 											<tr>
 												<td align="center">
 													<p>Вы получаете письмо, потому что подписались на рассылку iprintix.com. Если вы
-														не хотите больше получать наши письма, нажмите <a href="#" target="blank">отписаться</a>.</p>
+														не хотите больше получать наши письма, нажмите <a href="#"
+															target="blank">отписаться</a>.</p>
 												</td>
 											</tr>
 										</table>
